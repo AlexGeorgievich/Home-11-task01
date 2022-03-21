@@ -28,6 +28,7 @@ public class SystemPropertiesTests {
         // gradle clean test -Dbrowser=mozilla      -> mozilla
     }
     @Test
+    @Tag("smoke")
     void someTest5() {
         String browser = System.getProperty("browser","chrome");
         String browserVersion = System.getProperty("version", "92");
@@ -41,6 +42,6 @@ public class SystemPropertiesTests {
     @Test
     @Tag("smoke")
     void someTest7(){
-        System.out.println("You can say - " + System.getProperty("some_text"," === HELLO +++"));
+        System.out.println("You can say - " + System.getProperty("some_text"," +++ HELLO +++"));
     }
 }
